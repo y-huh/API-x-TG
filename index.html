@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>API-10</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="p-5 bg-green-300 flex items-center justify-between ">
+        <h1 class="font-bold text-[22px] text-white">Products</h1>
+        <button onclick="handleGetInfoButtonClick()" class="get-info-btn bg-white p-2 rounded-md">Get Info</button>
+    </header>
+    <main>
+        <section class="p-5">
+            <ul class="flex justify-between flex-wrap gap-5 products-list"></ul>
+        </section>
+        <div class="fixed scale-0 modal-wrapper inset-0 bg-[#00000079] flex items-center justify-center" id="wrapper">
+          <div class="bg-white w-[500px] modal-inner h-[300px] p-5 rounded-md">
+            <form class="info-form flex flex-col gap-5" autocomplete="off">
+              <input
+                class="p-3 rounded-md border-2 border-slate-500"
+                type="text"
+                placeholder="Enter your name"
+                name="username"
+              />
+              <input
+                class="p-3 rounded-md border-2 border-slate-500"
+                type="email"
+                placeholder="Enter your email"
+                name="email"
+              />
+              <input
+                class="p-3 rounded-md border-2 border-slate-500"
+                type="tel"
+                placeholder="Enter your number"
+                name="phone_number"
+              />
+              <button class="bg-green-500 p-2 rounded-md text-white font-bold text-[22px]">Send</button>
+            </form>
+          </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>
